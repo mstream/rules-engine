@@ -1,0 +1,17 @@
+plugins {
+    id "gradle-clojure.clojure" version "0.4.0"
+}
+
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+
+dependencies {
+    implementation "org.clojure:clojure:1.10.0"
+    implementation "org.clojure:data.json:0.2.6"
+    testImplementation "junit:junit:4.12"
+    testImplementation "org.mockito:mockito-core:2.27.0"
+}

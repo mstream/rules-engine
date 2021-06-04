@@ -1,0 +1,16 @@
+.advanced-mode-container {
+  margin: 20px;
+}
+.editor {
+  height: 80vh;
+  width: 100%;
+  font: 20px 'Opens Sans', sans-serif;
+  color: #404040;
+  letter-spacing: 1px;
+  padding: 14px;
+  max-width: 98%;
+  border-radius: 3px;
+}
+.float-right {
+  float: right;
+}

@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <span>Rules Engine <span class="light-background">| Coffee Andy?</span></span>
+  <span class="fill-remaining-space"></span>
+  <!-- <span>
+    
+
+    <mat-slide-toggle [(ngModel)]="isChecked" (change)="onAdvancedModeToggleChange(isChecked?'advance':'simple')">
+      <span class="small-font-size light-background" [ngClass]="{'active': isChecked}">Editor Mode</span>
+    </mat-slide-toggle>
+  </span> -->
+
+ 
+      <button mat-button (click)="onReload()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+      <button mat-button (click)="onSave()">
+        <mat-icon>save</mat-icon>
+      </button>
+      <button mat-button (click)="onAdvancedModeToggleChange(isChecked?'advance':'simple')">
+          <span class="small-font-size light-background" [ngClass]="{'active': isChecked}">Editor Mode</span>
+        </button>
+   
+</mat-toolbar>
+
+<router-outlet></router-outlet>

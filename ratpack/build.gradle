@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    api project(":core")
+    api "io.ratpack:ratpack-core:1.6.1"
+    api "org.slf4j:slf4j-api:1.7.26"
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.27.0'
+    testImplementation "io.ratpack:ratpack-test:1.6.1"
+}

@@ -1,0 +1,44 @@
+<mat-drawer-container class="rules-drawer-container">
+    <mat-drawer mode="side" opened class="drawer">
+
+        <div class="drag-message">
+            Drag To Reorder Rules
+        </div>
+
+        <div cdkDropList class="example-list" (cdkDropListDropped)="onRuleMove($event)">
+            <div class="example-box" *ngFor="let rule of orderedRuleNames;let i = index" (click)="onRuleClicked(i)"
+                cdkDrag>
+                <span class="rule-index">{{i}} | {{rule}}</span></div>
+        </div>
+
+    </mat-drawer>
+
+    <mat-drawer-content>
+
+
+        <div class="rule-form-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Rule Name</mat-label>
+                <input matInput (keyup)="onRuleNameChange()" [(ngModel)]="selectedRule.name" placeholder="Rule Name" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Conditions</mat-label>
+                <input matInput (keyup)="onConditionsChange()" [(ngModel)]="selectedRule.conditions"
+                    placeholder="Conditions" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Actions</mat-label>
+                <input matInput (keyup)="onActionsChange()" [(ngModel)]="selectedRule.actions" placeholder="Actions" />
+            </mat-form-field>
+        </div>
+
+
+
+
+
+
+    </mat-drawer-content>
+
+</mat-drawer-container>
